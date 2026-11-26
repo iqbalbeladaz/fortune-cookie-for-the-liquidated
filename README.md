@@ -77,6 +77,17 @@ breath: the classic fortune opening first, the double meaning of
 deterministic: the same bytes on every run, no input, no randomness, no
 network. Standard library only.
 
+## Verification
+
+Before submitting, the entry was run twice locally with
+`MAKEFUN_OUTPUT_DIR` pointed at two separate directories. Both runs
+produced byte-identical output: sha256
+`d2a8c096a963dd0f92eb4bece43e7f61780bae340f2449e4df581f1fd356315d`,
+78 bytes, 15 words — inside the gate of 1–160 characters and at most 20
+words. The program itself asserts both bounds before writing, so a
+future edit that broke the gate would fail loudly instead of submitting
+an invalid entry.
+
 ## License
 
 MIT — see [LICENSE](LICENSE).
